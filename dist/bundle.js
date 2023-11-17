@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"./src/style.css\");\n\nvar form = document.getElementById(\"location-form\");\nvar result = document.getElementById(\"result\");\nform.addEventListener(\"submit\", function (event) {\n  event.preventDefault();\n  var location = document.getElementById(\"location\").value;\n  result.textContent = \"\".concat(location);\n  form.reset();\n  console.log(location);\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"./src/style.css\");\n\nvar form = document.getElementById(\"location-form\");\nvar result = document.getElementById(\"result\");\nvar submit = document.getElementById(\"submit\");\nform.addEventListener(\"submit\", function (event) {\n  event.preventDefault();\n  var location = document.getElementById(\"location\").value;\n  result.textContent = \"Searched: \".concat(location);\n  form.reset();\n});\nsubmit.addEventListener(\"click\", function () {\n  var location = document.getElementById(\"location\").value;\n  fetch('https://api.weatherapi.com/v1/current.json?key=e8f61a33b1604c65bb3225134231411&q=' + location, {\n    mode: 'cors'\n  }).then(function (response) {\n    return response.json();\n  }).then(function (response) {\n    console.log(response);\n  }).catch(function (e) {\n    console.log(e);\n  });\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
