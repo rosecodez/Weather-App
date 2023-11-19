@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"./src/style.css\");\n\nvar form = document.getElementById(\"location-form\");\nvar result = document.getElementById(\"result\");\nvar submit = document.getElementById(\"submit\");\nform.addEventListener(\"submit\", function (event) {\n  event.preventDefault();\n  var location = document.getElementById(\"location\").value;\n  result.textContent = \"Searched: \".concat(location);\n  form.reset();\n});\nsubmit.addEventListener(\"click\", function () {\n  var location = document.getElementById(\"location\").value;\n  var name = document.getElementById(\"name\");\n  var localTime = document.getElementById(\"location\");\n  var region = document.getElementById(\"region\");\n  var country = document.getElementById(\"country\");\n  var lastUpdated = document.getElementById(\"lastUpdated\");\n  var temperatureC = document.getElementById(\"temperatureC\");\n  var temperatureF = document.getElementById(\"temperatureF\");\n  var text = document.getElementById(\"text\");\n  var feelsLikeC = document.getElementById(\"feelsLikeC\");\n  var feelsLikeF = document.getElementById(\"feelsLikeF\");\n  var cloud = document.getElementById(\"cloud\");\n  var humidity = document.getElementById(\"humidity\");\n  var windKph = document.getElementById(\"windKph\");\n  var windMph = document.getElementById(\"windMph\");\n  fetch('https://api.weatherapi.com/v1/current.json?key=e8f61a33b1604c65bb3225134231411&q=' + location, {\n    mode: 'cors'\n  }).then(function (response) {\n    return response.json();\n  }).then(function (response) {\n    console.log(response);\n    name.textContent = \"City: \" + response.location.name;\n    localTime.textContent = \"Local time: \" + response.location.localtime;\n    region.textContent = \"Region: \" + response.location.region;\n    country.textContent = \"Country: \" + response.location.country;\n    temperatureC.textContent = \"Temperature (C): \" + response.current.temp_c;\n    temperatureF.textContent = \"Temperature (F): \" + response.current.temp_f;\n    text.textContent = \"Weather: \" + response.current.condition.text;\n    feelsLikeC.textContent = \"Feels like (C): \" + response.current.feelslike_c;\n    feelsLikeF.textContent = \"Feels like (F): \" + response.current.feelslike_f;\n    cloud.textContent = \"Cloud: \" + response.current.cloud;\n    humidity.textContent = \"Humidity: \" + response.current.humidity;\n    lastUpdated.textContent = \"Last updated: \" + response.current.last_updated;\n    windKph.textContent = \"Wind (Kph): \" + response.current.wind_kph;\n    windMph.textContent = \"Wind (Mph): \" + response.current.wind_mph;\n  });\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"./src/style.css\");\n/* harmony import */ var _src_images_rainy_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/images/rainy.png */ \"./src/images/rainy.png\");\n/* harmony import */ var _src_images_snowy_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/images/snowy.png */ \"./src/images/snowy.png\");\n/* harmony import */ var _src_images_cloudy_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/images/cloudy.png */ \"./src/images/cloudy.png\");\n/* harmony import */ var _src_images_sunny_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../src/images/sunny.png */ \"./src/images/sunny.png\");\n\n\n\n\n\nvar form = document.getElementById(\"location-form\");\nvar result = document.getElementById(\"result\");\nvar submit = document.getElementById(\"submit\");\nform.addEventListener(\"submit\", function (event) {\n  event.preventDefault();\n  var location = document.getElementById(\"location\").value;\n  result.textContent = \"Searched: \".concat(location);\n  form.reset();\n});\nsubmit.addEventListener(\"click\", function () {\n  var location = document.getElementById(\"location\").value;\n  var image = document.querySelector(\"img\");\n  var name = document.getElementById(\"name\");\n  var localTime = document.getElementById(\"location\");\n  var region = document.getElementById(\"region\");\n  var country = document.getElementById(\"country\");\n  var lastUpdated = document.getElementById(\"lastUpdated\");\n  var temperatureC = document.getElementById(\"temperatureC\");\n  var temperatureF = document.getElementById(\"temperatureF\");\n  var text = document.getElementById(\"text\");\n  var feelsLikeC = document.getElementById(\"feelsLikeC\");\n  var feelsLikeF = document.getElementById(\"feelsLikeF\");\n  var cloud = document.getElementById(\"cloud\");\n  var humidity = document.getElementById(\"humidity\");\n  var windKph = document.getElementById(\"windKph\");\n  var windMph = document.getElementById(\"windMph\");\n  fetch('https://api.weatherapi.com/v1/current.json?key=e8f61a33b1604c65bb3225134231411&q=' + location, {\n    mode: 'cors'\n  }).then(function (response) {\n    return response.json();\n  }).then(function (response) {\n    console.log(response);\n    name.textContent = \"City: \" + response.location.name;\n    localTime.textContent = \"Local time: \" + response.location.localtime;\n    region.textContent = \"Region: \" + response.location.region;\n    country.textContent = \"Country: \" + response.location.country;\n    temperatureC.textContent = \"Temperature (C): \" + response.current.temp_c;\n    temperatureF.textContent = \"Temperature (F): \" + response.current.temp_f;\n    text.textContent = \"Weather: \" + response.current.condition.text;\n    feelsLikeC.textContent = \"Feels like (C): \" + response.current.feelslike_c;\n    feelsLikeF.textContent = \"Feels like (F): \" + response.current.feelslike_f;\n    cloud.textContent = \"Cloud: \" + response.current.cloud;\n    humidity.textContent = \"Humidity: \" + response.current.humidity;\n    lastUpdated.textContent = \"Last updated: \" + response.current.last_updated;\n    windKph.textContent = \"Wind (Kph): \" + response.current.wind_kph;\n    windMph.textContent = \"Wind (Mph): \" + response.current.wind_mph;\n    if (response.current.condition.text === \"Overcast\" || \"Rain\") {\n      image.src = _src_images_rainy_png__WEBPACK_IMPORTED_MODULE_1__;\n    } else {}\n  });\n  console.log(text);\n});\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
@@ -118,6 +118,46 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://webpack-demo/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
 
+/***/ }),
+
+/***/ "./src/images/cloudy.png":
+/*!*******************************!*\
+  !*** ./src/images/cloudy.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0778a8e30dad376c3dbf.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/images/cloudy.png?");
+
+/***/ }),
+
+/***/ "./src/images/rainy.png":
+/*!******************************!*\
+  !*** ./src/images/rainy.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c06e7a253d64afe0f0b8.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/images/rainy.png?");
+
+/***/ }),
+
+/***/ "./src/images/snowy.png":
+/*!******************************!*\
+  !*** ./src/images/snowy.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6bfa0ae6df0cc149ee2c.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/images/snowy.png?");
+
+/***/ }),
+
+/***/ "./src/images/sunny.png":
+/*!******************************!*\
+  !*** ./src/images/sunny.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6aadfc2404f752008466.png\";\n\n//# sourceURL=webpack://webpack-demo/./src/images/sunny.png?");
+
 /***/ })
 
 /******/ 	});
@@ -171,6 +211,18 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -185,6 +237,29 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

@@ -1,4 +1,9 @@
 import "../src/style.css";
+import rainy from "../src/images/rainy.png";
+import snowy from "../src/images/snowy.png";
+import cloudy from "../src/images/cloudy.png";
+import sunny from "../src/images/sunny.png";
+
 const form = document.getElementById("location-form");
 const result = document.getElementById("result");
 const submit = document.getElementById("submit");
@@ -11,6 +16,7 @@ form.addEventListener("submit", (event) => {
 });
 submit.addEventListener("click", () => {
     const location = document.getElementById("location").value;
+    const image = document.querySelector("img");
     const name = document.getElementById("name");
     const localTime = document.getElementById("location");
     const region = document.getElementById("region");
@@ -31,7 +37,6 @@ submit.addEventListener("click", () => {
         })
         .then(function(response) {
             console.log(response);
-            
             name.textContent = "City: " + response.location.name;
             localTime.textContent = "Local time: " + response.location.localtime;
             region.textContent = "Region: " + response.location.region;
@@ -46,5 +51,15 @@ submit.addEventListener("click", () => {
             lastUpdated.textContent = "Last updated: " + response.current.last_updated;
             windKph.textContent = "Wind (Kph): " + response.current.wind_kph;
             windMph.textContent = "Wind (Mph): " + response.current.wind_mph;
+            if (response.current.condition.text === "Overcast" || "Rain") {
+                image.src = rainy;
+            } else if (response.current.condition.text === "Snow") {
+                image.src = snowy;
+            } else if (response.current.condition.text === "Clear") {
+                image.src = sunny;
+            } else if (response.current.condition.text === "Partly cloudy") {
+                image.src = cloudy;
+            }
         })
+    console.log(text)
 });
