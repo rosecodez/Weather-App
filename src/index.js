@@ -18,7 +18,7 @@ submit.addEventListener("click", () => {
     const location = document.getElementById("location").value;
     const image = document.querySelector("img");
     const name = document.getElementById("name");
-    const localTime = document.getElementById("location");
+    const localTime = document.getElementById("localTime");
     const region = document.getElementById("region");
     const country = document.getElementById("country");
     const lastUpdated = document.getElementById("lastUpdated");
@@ -51,15 +51,14 @@ submit.addEventListener("click", () => {
             lastUpdated.textContent = "Last updated: " + response.current.last_updated;
             windKph.textContent = "Wind (Kph): " + response.current.wind_kph;
             windMph.textContent = "Wind (Mph): " + response.current.wind_mph;
-            if (response.current.condition.text === "Overcast" || "Rain") {
+            if (response.current.condition.text == "Rain" || response.current.condition.text == "Overcast") {
                 image.src = rainy;
-            } else if (response.current.condition.text === "Snow") {
+            } else if (response.current.condition.text == "Snow" || response.current.condition.text =="Light snow") {
                 image.src = snowy;
-            } else if (response.current.condition.text === "Clear") {
+            } else if (response.current.condition.text == "Clear") {
                 image.src = sunny;
-            } else if (response.current.condition.text === "Partly cloudy") {
+            } else if (response.current.condition.text == "Cloudy" || response.current.condition.text == "Partly cloudy") {
                 image.src = cloudy;
             }
         })
-    console.log(text)
 });
